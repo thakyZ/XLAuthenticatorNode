@@ -1,2 +1,3 @@
 # XLAuthenticatorNode
-CLI Application for XL Launcher
+
+CLI TOTP Application for XL Launcher

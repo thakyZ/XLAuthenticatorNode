@@ -1,0 +1,25 @@
+{
+  "name": "xlauthenticatornode",
+  "version": "1.0.0",
+  "description": "CLI TOTP Application for XL Launcher",
+  "main": "index.js",
+  "scripts": {
+    "test": "eslint index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thakyZ/XLAuthenticatorNode.git"
+  },
+  "keywords": [
+    "totp",
+    "cli",
+    "ffxiv",
+    "xlauncher"
+  ],
+  "author": "Neko Boi Nick",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/thakyZ/XLAuthenticatorNode/issues"
+  },
+  "homepage": "https://github.com/thakyZ/XLAuthenticatorNode#readme"
+}
