@@ -1,7 +1,7 @@
 "use strict";
 
 const crypto = require("node:crypto");
-const { Buffer } = require("node:buffer/");
+const { Buffer } = require("node:buffer");
 const { options } = require("./bridge.js");
 
 const decryptString = (text, key, hash = false) => {

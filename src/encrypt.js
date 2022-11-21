@@ -1,7 +1,7 @@
 "use strict";
 
 const crypto = require("node:crypto");
-const { Buffer } = require("node:buffer/");
+const { Buffer } = require("node:buffer");
 
 const encryptString = (text, key) => {
   const hashedKey = crypto.scryptSync(Buffer.from(key), Buffer.from("c291cGNhdHNvdXA=", "base64").toString("utf8"), 32);
