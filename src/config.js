@@ -42,10 +42,10 @@ const Config = class {
    * @param {Account} account he account to add to the list.
    */
   addNewAccount(account) {
-    if (this.#Accounts.some(_account => _account.name === account.Name) === undefined) {
+    if (this.#Accounts.some(_account => _account.name === account.Name) === false) {
       this.#Accounts.push(account);
     } else {
-      console.error({ message: `Cannot create account with name '${account.Name}' as it already exists.` });
+      console.error(`Cannot create account with name '${account.Name}' as it already exists.`);
     }
   }
 

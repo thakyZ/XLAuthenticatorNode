@@ -42,7 +42,7 @@ const options = commandLineArgs([
   },
 ]);
 
-const configPath = path.join(__dirname, "config.json");
+const configPath = path.join(__dirname, "..", "config.json");
 
 let loadedConfig;
 
@@ -128,10 +128,11 @@ const openAccount = async (onLoad = false) => {
   return result;
 };
 
-exports.cli = async () => {
+exports.cli = async (args) => {
   if (options.debug) {
     console.log("!DEBUG ENABLED!");
     console.log(options);
+    console.log({ configPath });
     bridge.debug = true;
     bridge.g = options.getHash;
   }
