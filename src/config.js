@@ -133,7 +133,7 @@ const Account = class {
    * @returns {boolean} promise of the password
    */
   async setSecret(secret) {
-    if (secret.test(/^aes-/)) {
+    if (secret.startsWith("aes-")) {
       this.#Secret = secret;
       return true;
     }
@@ -153,7 +153,7 @@ const Account = class {
    * @returns {string} The secret after prompt otherwise undefined.
    */
   async getSecret(pass = null, hash = false) {
-    if (this.#Secret.test(/^aes-/)) {
+    if (this.#Secret.startsWith("aes-")) {
       if (pass !== null) {
         return decrypt.decryptString(this.#Secret, pass, hash);
       }
@@ -249,7 +249,7 @@ const createNewConfig = async path => {
   const settings = await prompt.get(settingsPrompt);
   const accountPrompt = await prompt.get(accountPromptDefaults);
   const config = new Config("4646", settings.ip);
-  const account = new Account(accountPrompt.name, accountPrompt.closeonsend.test(/^[yY]$/));
+  const account = new Account(accountPrompt.name, /^[yY]$/.test(accountPrompt.closeonsend));
   const secretSet = await account.setSecret(accountPrompt.totpsecret);
   if (!secretSet) {
     return undefined;

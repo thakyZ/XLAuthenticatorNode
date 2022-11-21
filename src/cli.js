@@ -117,7 +117,7 @@ const openAccount = async (onLoad = false) => {
     console.log(" q: Quit");
     const accountChoice = (await prompt.get([{ description: "Choose an account by name/number", name: "account", message: "Must be a valid account" }]));
 
-    if (accountChoice.account.test(/^(exit|quit|e|x|q)$/)) {
+    if (/^(exit|quit|e|x|q)$/.test(accountChoice.account)) {
       result = true;
     } else {
       const chosenAccount = loadedConfig.getAccount(accountChoice.account, true);
