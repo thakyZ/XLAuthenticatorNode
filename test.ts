@@ -1,7 +1,7 @@
-const childProcess = require("node:child_process");
-const execa = require("execa");
-const pEvent = require("p-event");
-const test = require("ava");
+import * as childProcess from "child_process";
+import * as execa from "execa";
+import { pEvent } from "p-event";
+import { default as test } from "ava";
 
 test("default", async t => {
   const subprocess = childProcess.spawn("./index.js", { stdio: "inherit" });
