@@ -6,7 +6,8 @@
     "xlauth": "out/bin/xlauth.js"
   },
   "scripts": {
-    "lint": "cross-env ESLINT_USE_FLAT_CONFIG=true ./node_modules/.bin/eslint -c ./eslint.config.mjs ./src/*.ts && ava"
+    "lint": "cross-env ESLINT_USE_FLAT_CONFIG=true ./node_modules/.bin/eslint -c ./eslint.config.mjs ./src/*.ts && ava",
+    "build": "tsc -p ./tsconfig.json"
   },
   "engines": {
     "node": ">=18.3"
