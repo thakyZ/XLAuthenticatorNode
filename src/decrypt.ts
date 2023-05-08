@@ -27,7 +27,7 @@ export function decryptString(text: string, key: string, hash = false): any {
 
     hashedKey = crypto.scryptSync(Buffer.from(key), Buffer.from("c291cGNhdHNvdXA=", "base64").toString("utf8"), 32);
     if (options.g) {
-      console.log(parseInt(hashedKey.toString("utf8"), 16));
+      console.log(hashedKey.toString("hex"));
     }
   }
 
