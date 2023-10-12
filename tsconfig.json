@@ -6,6 +6,8 @@
     "lib": [
       "es6"
     ],
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
     "skipLibCheck": true,
     "sourceMap": true
   },
